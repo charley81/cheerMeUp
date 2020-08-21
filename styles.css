@@ -10,7 +10,6 @@ body {
 
 img {
   width: 100%;
-  height: 500px;
 }
 
 nav {
@@ -26,11 +25,9 @@ nav {
 
 .wrap {
   max-width: 700px;
-
   padding: 1rem;
   border-radius: 5px;
-  height: 600px;
-  margin: 2rem auto 0;
+  height: 100vh;
 }
 
 .next {
@@ -57,4 +54,5 @@ nav {
   color: white;
   text-align: center;
   display: none;
+  font-size: 1.5rem;
 }
