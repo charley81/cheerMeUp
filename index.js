@@ -29,12 +29,13 @@ const loading = document.querySelector('.loading');
 const URL = 'https://dog.ceo/api/breeds/image/random';
 
 const fetchDog = () => {
-  dogImg.src = '';
-  loading.style.display = 'block';
+  dogImg.style.visibility = 'hidden';
+  loading.style.visibility = 'visible';
   fetch(URL)
     .then(res => res.json())
     .then(data => {
-      loading.style.display = 'none';
+      loading.style.visibility = 'hidden';
+      dogImg.style.visibility = 'visible';
       dogImg.src = data.message;
     });
 };
