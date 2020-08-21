@@ -24,13 +24,17 @@ listen(document, 'mouseup touchend').start(() => {
 // Fetch dog image
 const dogImg = document.querySelector('.dog-img img');
 const nextBtn = document.querySelector('.next');
+const loading = document.querySelector('.loading');
 
 const URL = 'https://dog.ceo/api/breeds/image/random';
 
 const fetchDog = () => {
+  dogImg.src = '';
+  loading.style.display = 'block';
   fetch(URL)
     .then(res => res.json())
     .then(data => {
+      loading.style.display = 'none';
       dogImg.src = data.message;
     });
 };
